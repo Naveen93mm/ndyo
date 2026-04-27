@@ -2217,3 +2217,23 @@ body {
   font-size:30px;
   margin-bottom:10px;
 }
+
+
+
+@media (max-width: 768px) {
+
+  /* Solutions + Career sections */
+  .solutions-section .row.align-items-center,
+  .career-section .row.align-items-center {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Image column always first */
+  .solutions-section .row.align-items-center .col-lg-6.text-center,
+  .career-section .row.align-items-center .col-lg-6.text-center {
+    order: -1;
+    margin-bottom: 15px;
+  }
+
+}
