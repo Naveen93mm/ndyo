@@ -6,20 +6,34 @@ https://templatemo.com/tm-587-tiya-golf-club
 
 */
 
+/* DEFAULT NAV LINK */
+.navbar-nav .nav-link {
+  color: #111 !important;
+}
 
+/* ACTIVE (HOME always blue) */
+.navbar-nav .nav-link.active {
+  color: #4F7CFF !important;
+  border-bottom: 2px solid #4F7CFF;
+}
+
+/* HOVER */
+.navbar-nav .nav-link:hover {
+  color: #4F7CFF !important;
+}
 /*---------------------------------------
   CUSTOM PROPERTIES ( VARIABLES )             
 -----------------------------------------*/
 :root {
   --white-color:                  #ffffff;
-  --primary-color:                #81B29A;
-  --secondary-color:              #3D405B;
+  --primary-color:                #5271FF;
+  --secondary-color:              #A6A6A6;
   --section-bg-color:             #F4F1DE;
-  --custom-btn-bg-color:          #F2CC8F;
+  --custom-btn-bg-color:         #5271FF;
   --custom-btn-bg-hover-color:    #E07A5F;
   --dark-color:                   #000000;
   --p-color:                      #717275;
-  --link-hover-color:             #F2CC8F;
+  --link-hover-color:             #5271FF;
 
   --body-font-family:             'DM Sans', sans-serif;
 
@@ -438,7 +452,7 @@ strong {
 }
 
 .sticky-wrapper.is-sticky .navbar {
-  background-color: rgb(61 64 91);
+  background-color: rgb(255, 255, 255);
 }
 
 .navbar {
@@ -467,7 +481,7 @@ strong {
 }
 
 .navbar-brand-image {
-  width: 90px;
+  width: 120px;
   height: auto;
   object-fit: contain;
 }
@@ -493,7 +507,7 @@ strong {
 
 .navbar-nav .nav-link {
   display: inline-block;
-  color: var(--white-color);
+   color: #111 !important;
   font-size: var(--menu-font-size);
   font-weight: var(--font-weight-medium);
   padding-top: 15px;
@@ -648,7 +662,7 @@ strong {
 .show-nav {
   transform: translateY(0);          /* visible */
   transition: transform 0.25s ease-out;
-  background-color: rgb(61, 64, 91) !important;
+  background-color: rgb(255, 255, 255) !important;
 }
 
 .hide-nav {
@@ -1894,133 +1908,312 @@ body {
 
 
 /* ================= PRICING SECTION ================= */
-
+/* ================= GLOBAL SAFE ================= */
+/* ================= GLOBAL STYLES ================= */
+/* ================= PRICING SECTION ================= */
+/* ================= PRICING CARD FINAL ================= */
+/* General Setup */
 .pricing-section {
-  max-width: 1200px;
-  margin: auto;
-  padding: 80px 20px;
+    font-family: 'Inter', sans-serif;
+    background: #f6f7fb;
+    padding: 30px;
 }
 
 /* CARD */
-.package-card {
-  display: flex;
-  background: #ffffff;
-  border-radius: 18px;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
-  overflow: hidden;
+.pricing-section .package-card {
+    display: flex;
+    gap: 20px; /* slightly reduced gap */
+    background: #fff;
+    border-radius: 16px;
+    padding: 20px; /* reduced from 28px */
+    margin-bottom: 30px; /* reduced from 35px */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.pricing-section .package-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.12);
 }
 
-/* ================= LEFT SIDE ================= */
-
-.package-left {
-  flex: 1;
-  padding: 35px;
-  background: linear-gradient(135deg, #f8f9ff, #ffffff);
+/* LEFT */
+.pricing-section .package-left {
+    flex: 1.1;
 }
 
-.package-left h3 {
-  font-size: 26px;
-  font-weight: 700;
-  margin-bottom: 6px;
+.pricing-section .package-img {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 12px; /* reduced from 16px */
 }
 
-.package-left .price {
-  font-size: 32px;
+.pricing-section .package-title {
+    font-size: 24px;
+    font-weight: 900;
+    color: #1a1a1a;
+    letter-spacing: 0.5px;
+}
+
+.pricing-section .target {
+    font-size: 14px;
+    color: #777;
+    margin: 4px 0 10px; /* reduced margin */
+}
+
+.pricing-section .price {
+    font-size: 34px;
+    font-weight: 900;
+    color: #1a73e8;
+}
+
+/* CENTER */
+.pricing-section .package-center {
+    flex: 1.4;
+}
+
+.pricing-section .pages {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 12px; /* reduced from 16px */
+}
+
+.pricing-section .features {
+    list-style: none;
+    padding: 0;
+}
+
+.pricing-section .features li {
+    font-size: 14px;
+    margin-bottom: 6px; /* reduced from 10px */
+    font-weight: 600;
+    color: #222;
+}
+
+/* BASE BUNDLE HEADING */
+.pricing-section .base-bundle {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 800;
+    color: #1a1a1a;
+    margin-bottom: 8px; /* reduced from 12px */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* RIGHT */
+.pricing-section .package-right {
+    flex: 1.15;
+    background: #fafafa;
+    padding: 12px; /* reduced from 18px */
+    border-radius: 14px;
+    border: 1px solid #eee;
+}
+
+/* ADDONS */
+.pricing-section .addon-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px; /* reduced from 10px */
+}
+
+.pricing-section .addon-item {
+    display: flex;
+    align-items: center;
+    gap: 6px; /* reduced from 10px */
+    background: #fff;
+    border: 1px solid #eaeaea;
+    padding: 6px 8px; /* reduced from 10px 12px */
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+}
+.pricing-section .addon-item:hover {
+    background: #f0f4ff;
+    transform: translateX(2px);
+}
+
+.pricing-section .addon-item span {
+    flex: 1;
+    font-size: 14px;
+    font-weight: 600;
+    color: #000; /* addon name black */
+}
+
+.pricing-section .addon-item strong {
+    font-size: 14px;
+    font-weight: 700;
+    color: #16a34a; /* amount green */
+}
+
+.pricing-section input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    accent-color: #1a73e8;
+}
+
+/* TOTAL */
+.pricing-section .total {
+    margin-top: 12px; /* reduced from 18px */
+    font-size: 20px;
+    font-weight: 900;
+    text-align: right;
+    color: #1a1a1a;
+}
+
+/* BUTTON */
+.pricing-section .buy-btn {
+    margin-top: 10px; /* reduced from 14px */
+    width: 100%;
+    background: linear-gradient(135deg, #1a73e8, #0f5bd6);
+    color: #fff;
+    border: none;
+    padding: 12px; /* reduced from 14px */
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.pricing-section .buy-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+    .pricing-section .package-card {
+        flex-direction: column;
+    }
+}
+
+
+@media screen and (max-width: 991px) {
+  .navbar {
+    background-color: #ffffff !important;
+  }
+}
+
+.navbar-toggler .navbar-toggler-icon,
+.navbar-toggler .navbar-toggler-icon::before,
+.navbar-toggler .navbar-toggler-icon::after {
+  background: #38b6ff !important;
+}
+
+.navbar-toggler .navbar-toggler-icon,
+.navbar-toggler .navbar-toggler-icon::before,
+.navbar-toggler .navbar-toggler-icon::after {
+  height: 3px;
+}
+
+.world-map {
+  filter: brightness(0) saturate(100%) invert(38%) sepia(96%) saturate(1224%) hue-rotate(210deg) brightness(100%) contrast(101%);
+}
+
+/* PRODUCT IMAGE STYLE */
+.product-img {
+    border-radius: 20px;          /* round corner */
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* HOVER EFFECT */
+.product-img:hover {
+    transform: scale(1.07);       /* konjam big */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2); /* depth feel */
+}
+
+
+/* TITLE */
+.career-title {
+  font-size: 42px;
   font-weight: 800;
-  color: #2a7fff;
-  margin-bottom: 16px;
 }
 
-/* ================= RIGHT SIDE ================= */
-
-.package-right {
-  width: 350px;
-  padding: 32px 8px 32px 8px; /* 🔥 STRONG LEFT MOVE */
-  background: #f5f7fa;
-  border-left: 1px solid #e5e7eb;
+.career-sub {
+  color: #666;
 }
 
-
-.package-right h4 {
-  font-size: 18px;
-  margin-bottom: 18px;
-  font-weight: 700;
+/* GLASS CARD */
+.career-card {
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(12px);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.08);
 }
 
-/* ================= ADDONS ================= */
-
-.addon-item {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  background: #ffffff;
-  padding: 12px 12px;
-  border-radius: 10px;
-  margin-bottom: 10px;
-  font-size: 14px;
-  border: 1px solid #e5e7eb;
-  cursor: pointer;
-
-  /* 🔒 SINGLE LINE */
-  white-space: nowrap;
-  overflow: hidden;
+/* INPUT */
+.career-card input {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 12px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  transition: 0.3s;
 }
 
-.addon-item:hover {
-  background: #eef4ff;
-  border-color: #2a7fff;
+.career-card input:focus {
+  border-color: #5271FF;
+  box-shadow: 0 0 0 2px rgba(82,113,255,0.2);
 }
 
-/* checkbox + text */
-.addon-item label {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  flex: 1;
-  min-width: 0;
-}
-
-/* text cut */
-.addon-item label span {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-
-/* ================= TOTAL ================= */
-
-.total {
-  font-size: 20px;
-  font-weight: 700;
-  margin: 20px 0;
-  text-align: center;
-}
-
-/* BUY BUTTON */
-.buy-btn {
+/* BUTTON */
+.career-card button {
   width: 100%;
   padding: 14px;
   border-radius: 12px;
   border: none;
-  font-size: 16px;
-  font-weight: 700;
-  color: #fff;
-  background: linear-gradient(135deg, #2a7fff, #0057ff);
-  cursor: pointer;
+  background: linear-gradient(135deg,#5271FF,#38b6ff);
+  color: white;
+  font-weight: bold;
+  transition: 0.3s;
 }
 
-/* ================= MOBILE ================= */
+.career-card button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
 
-@media (max-width: 900px) {
-  .package-card {
-    flex-direction: column;
-  }
+/* IMAGE */
+.career-img {
+  width: 85%;
+  max-width: 420px;
+  border-radius: 20px;
+  transition: 0.4s;
+}
 
-  .package-right {
-    width: 100%;
-    padding: 28px 22px;
-    border-left: none;
-    border-top: 1px solid #e5e7eb;
-  }
+.career-img:hover {
+  transform: scale(1.05);
+}
+
+
+.section-heading{
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  text-align: left; /* or center if you want */
+}
+
+.career-card{
+  background:#fff;
+  padding:25px;
+  border-radius:12px;
+  box-shadow:0 10px 25px rgba(0,0,0,.1);
+}
+
+
+.section-heading{
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.career-card{
+  background:#fff;
+  padding:25px;
+  border-radius:12px;
+  box-shadow:0 10px 25px rgba(0,0,0,.1);
+}
+
+.icon-box{
+  font-size:30px;
+  margin-bottom:10px;
 }
